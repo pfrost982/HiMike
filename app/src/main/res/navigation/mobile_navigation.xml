@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="ru.gb.himike.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_classes"
+        android:name="ru.gb.himike.ui.classes.ClassesFragment"
+        android:label="@string/title_classes"
+        tools:layout="@layout/fragment_classes" />
+
+    <fragment
+        android:id="@+id/navigation_stub1"
+        android:name="ru.gb.himike.ui.stub.StubFragment"
+        android:label="@string/title_stub"
+        tools:layout="@layout/fragment_stub" />
+
+    <fragment
+        android:id="@+id/navigation_stub2"
+        android:name="ru.gb.himike.ui.stub.StubFragment"
+        android:label="@string/title_stub"
+        tools:layout="@layout/fragment_stub" />
+</navigation>
