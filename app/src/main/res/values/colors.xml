@@ -7,6 +7,7 @@
     <color name="bottomMenuText">#2db087</color>
     <color name="gradientStart">#36ef88</color>
     <color name="gradientEnd">#2db087</color>
+    <color name="blue">#4ad0ff</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 </resources>

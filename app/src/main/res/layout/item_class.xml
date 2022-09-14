@@ -1,0 +1,94 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_gravity="center"
+    android:layout_margin="16dp"
+    android:background="@drawable/gray_shape"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="5dp">
+
+
+    <ImageView
+        android:id="@+id/image_lesson"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/bow"
+        android:contentDescription="icon"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/name_lesson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:textSize="16sp"
+        android:text="History"
+        app:layout_constraintBottom_toTopOf="@id/time_lesson"
+        app:layout_constraintEnd_toStartOf="@id/go_to_lesson"
+        app:layout_constraintStart_toEndOf="@id/image_lesson"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/time_lesson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:text="8.00-8.45"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/image_lesson"
+        app:layout_constraintTop_toBottomOf="@id/name_lesson" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/go_to_lesson"
+        android:layout_width="70dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/blue_shape"
+        android:elevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/open_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Open in"
+            android:layout_marginTop="16dp"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:rotation="90"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/camera"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Open in"
+            android:textSize="16sp"
+            android:src="@drawable/ic_video_24"
+            android:rotation="90"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/open_in" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

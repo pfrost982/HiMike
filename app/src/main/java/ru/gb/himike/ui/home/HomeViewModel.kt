@@ -33,8 +33,7 @@ class HomeViewModel : ViewModel() {
                 millisLeft %= hoursInMilli
                 val minutesLeft = millisLeft / minutesInMilli
                 millisLeft %= minutesInMilli
-                //${String.format("%.2d", hoursLeft)}
-                _countdownString.postValue("${daysLeft}:${hoursLeft}:${minutesLeft}")
+                _countdownString.postValue("${String.format("%02d", daysLeft)} : ${String.format("%02d", hoursLeft)} : ${String.format("%02d", minutesLeft)}")
             }
 
             override fun onFinish() {

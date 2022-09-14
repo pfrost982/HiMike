@@ -26,7 +26,7 @@ class HomeFragment : Fragment() {
         val root: View = binding.root
 
         homeViewModel.countdownString.observe(viewLifecycleOwner) {
-            binding.timerData.count.text = it
+            binding.count.text = it
         }
         return root
     }
