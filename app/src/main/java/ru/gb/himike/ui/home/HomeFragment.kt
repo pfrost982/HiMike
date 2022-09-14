@@ -7,7 +7,10 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import ru.gb.himike.databinding.FragmentHomeBinding
+import ru.gb.himike.ui.home.recycler_classes.ClassesAdapter
+import ru.gb.himike.ui.home.recycler_classes.lessons
 
 class HomeFragment : Fragment() {
 
@@ -29,6 +32,15 @@ class HomeFragment : Fragment() {
             binding.count.text = it
         }
         return root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.classesRecyclerview.layoutManager = LinearLayoutManager(
+            requireContext(), LinearLayoutManager
+                .HORIZONTAL, false
+        )
+        binding.classesRecyclerview.adapter = ClassesAdapter(lessons)
     }
 
     override fun onDestroyView() {
