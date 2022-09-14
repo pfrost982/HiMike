@@ -4,9 +4,9 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import ru.gb.himike.databinding.ItemHomeworkBinding
-import ru.gb.himike.entity.Lesson
+import ru.gb.himike.entity.Homework
 
-class HomeworkAdapter(private val lessonsList: List<Lesson>) : RecyclerView.Adapter<HomeworkAdapter.ClassesViewHolder>() {
+class HomeworkAdapter(private val homeworksList: List<Homework>) : RecyclerView.Adapter<HomeworkAdapter.ClassesViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ClassesViewHolder {
         val inflater = LayoutInflater.from(parent.context)
@@ -14,17 +14,17 @@ class HomeworkAdapter(private val lessonsList: List<Lesson>) : RecyclerView.Adap
     }
 
     override fun onBindViewHolder(holder: ClassesViewHolder, position: Int) {
-        holder.bind(lessonsList[position])
+        holder.bind(homeworksList[position])
     }
 
-    override fun getItemCount(): Int = lessonsList.size
+    override fun getItemCount(): Int = homeworksList.size
 
     inner class ClassesViewHolder(private val binding: ItemHomeworkBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(lesson: Lesson) {
-            binding.nameLesson.text = lesson.name
-            binding.timeLesson.text = lesson.time
-            binding.imageLesson.setImageResource(lesson.icon)
+        fun bind(homework: Homework) {
+            binding.nameLesson.text = homework.name
+            binding.description.text = homework.description
+            binding.imageLesson.setImageResource(homework.icon)
         }
     }
 }

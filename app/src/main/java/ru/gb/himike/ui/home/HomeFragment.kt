@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import ru.gb.himike.databinding.FragmentHomeBinding
 import ru.gb.himike.ui.home.recycler_classes.ClassesAdapter
 import ru.gb.himike.ui.home.recycler_classes.HomeworkAdapter
+import ru.gb.himike.ui.home.recycler_classes.homeworks
 import ru.gb.himike.ui.home.recycler_classes.lessons
 
 class HomeFragment : Fragment() {
@@ -47,7 +48,7 @@ class HomeFragment : Fragment() {
             requireContext(), LinearLayoutManager
                 .HORIZONTAL, false
         )
-        binding.homeworkRecyclerview.adapter = HomeworkAdapter(lessons)
+        binding.homeworkRecyclerview.adapter = HomeworkAdapter(homeworks)
     }
 
     override fun onDestroyView() {
