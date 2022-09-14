@@ -3,14 +3,14 @@ package ru.gb.himike.ui.home.recycler_classes
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import ru.gb.himike.databinding.ItemClassBinding
+import ru.gb.himike.databinding.ItemHomeworkBinding
 import ru.gb.himike.entity.Lesson
 
-class ClassesAdapter(private val lessonsList: List<Lesson>) : RecyclerView.Adapter<ClassesAdapter.ClassesViewHolder>() {
+class HomeworkAdapter(private val lessonsList: List<Lesson>) : RecyclerView.Adapter<HomeworkAdapter.ClassesViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ClassesViewHolder {
         val inflater = LayoutInflater.from(parent.context)
-        return ClassesViewHolder(ItemClassBinding.inflate(inflater, parent, false))
+        return ClassesViewHolder(ItemHomeworkBinding.inflate(inflater, parent, false))
     }
 
     override fun onBindViewHolder(holder: ClassesViewHolder, position: Int) {
@@ -19,7 +19,7 @@ class ClassesAdapter(private val lessonsList: List<Lesson>) : RecyclerView.Adapt
 
     override fun getItemCount(): Int = lessonsList.size
 
-    inner class ClassesViewHolder(private val binding: ItemClassBinding) :
+    inner class ClassesViewHolder(private val binding: ItemHomeworkBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(lesson: Lesson) {
             binding.nameLesson.text = lesson.name
