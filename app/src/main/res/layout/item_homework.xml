@@ -6,51 +6,61 @@
     android:layout_gravity="center"
     android:layout_margin="8dp"
     android:background="@drawable/gray_shape"
+    android:padding="24dp"
     app:cardCornerRadius="5dp"
     app:cardElevation="5dp">
-
-
-    <ImageView
-        android:id="@+id/image_lesson"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/history"
-        android:contentDescription="icon"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/name_lesson"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:layout_marginTop="8dp"
-        android:layout_marginStart="18dp"
-        android:textColor="@color/white"
         android:text="History"
-        app:layout_constraintBottom_toTopOf="@id/description"
-        app:layout_constraintStart_toEndOf="@id/image_lesson"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image_lesson"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:background="@drawable/history"
+        android:contentDescription="icon"
+        android:scaleType="fitCenter"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/days_left_clock"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:src="@drawable/ic_time_24"
+        android:textColor="@color/primaryLightColor"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/image_lesson" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/days_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="days left 3"
+        android:layout_marginLeft="4dp"
+        android:textColor="@color/primaryLightColor"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@id/days_left_clock"
+        app:layout_constraintBottom_toBottomOf="@id/image_lesson" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/description"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="18dp"
-        android:maxWidth="160dp"
+        android:layout_marginTop="14dp"
+        android:text="Calculate the simplest probabilities, as well as permutations and combinations."
         android:textColor="@color/white"
-        android:layout_marginBottom="8dp"
-        android:paddingEnd="8dp"
-        android:text="8.00-8.45"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/image_lesson"
-        app:layout_constraintTop_toBottomOf="@id/name_lesson" />
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_lesson" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

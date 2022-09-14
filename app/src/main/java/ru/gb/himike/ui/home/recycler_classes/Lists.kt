@@ -16,9 +16,9 @@ val lessons = listOf<Lesson>(
 val homeworks = listOf<Homework>(
     Homework(
         "Mathematics",
-        " Calculate the simplest probabilities, as well as permutations and combinations, on the basis of which more complex problems are constructed.",
+        "Calculate the simplest probabilities, as well as permutations and combinations.",
         R.drawable.mathematics,
-        6
+        2
     ),
     Homework(
         "Literature",
@@ -36,18 +36,18 @@ val homeworks = listOf<Homework>(
         "Geometry",
         "Pythagoras' theorem for right angles. The theorem of similar triangles.",
         R.drawable.geometry,
-        2
+        1
     ),
     Homework(
         "Biology",
         "Learn the structure of the kidneys. Paragraph 3, chapter 4",
         R.drawable.biology,
-        6
+        5
     ),
     Homework(
         "History",
         "History of ancient Pakistan. Read paragraphs 2.3-2.7.",
         R.drawable.history,
-        1
+        6
     )
 )
